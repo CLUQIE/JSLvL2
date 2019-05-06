@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>ShopVue</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="informationHeader">
+          <nav>
+            <ul>
+              <li><a href="#">ЖЕНСКОЕ</a></li>
+              <li><a href="#">МУЖСКОЕ</a></li>
+              <li><img class="imgLogo" src="images/Red.png" alt="logo images"></li>
+              <li><a href="#">FEDOROV COLLECTION</a></li>
+              <li><a href="#">СКИДКИ</a></li>
+            </ul>
+          </nav>
+          <div class="cartUser">
+            <object
+                  class="svgUser"
+                  type="image/svg+xml"
+                  data="images/user.svg">
+            </object>
+            <object
+                  class="svgCart"
+                  type="image/svg+xml"
+                  data="images/shopping-cart-black-shape.svg">
+            </object>
+          </div>
+        </div>
+        <div class="bannerHeader">
+          <div class="opacityBanner">
+
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="crumbs">
+
+        </section>
+        <div class="conteiner">
+          <aside class="filters">
+
+          </aside>
+          <section class="goods">
+            <div class="products" v-for="product of products">
+          		<img :src="product.img" alt="">
+          		<div class="desc">
+          			<p>Название: {{ product.title }} </p>
+          			<p>Количество: {{ product.quantity }} </p>
+          			<p>Стоимость: {{ product.price }} </p>
+
+          		</div>
+          	</div>
+          </section>
+        </div>
+      </main>
+      <footer>
+
+      </footer>
+    </div>
+  <script type="text/javascript" src="vue.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
